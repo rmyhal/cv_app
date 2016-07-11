@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-before_action :set_skill, only: [:edit, :update, :destroy]
+before_action :set_skill, only: [:update, :destroy]
 before_action :set_resume
   def new
     @skill = Skill.new
@@ -11,8 +11,6 @@ before_action :set_resume
     if @skill.save
       flash[:notice] = "Skill created"
       redirect_to edit_resume_path(@resume)
-    else
-      render 'skills/new'
     end
   end
 
@@ -20,8 +18,6 @@ before_action :set_resume
     if @skill.update(skill_params)
       flash[:notice] = "Skill updated"
       redirect_to edit_resume_path(@resume)
-    else
-      render 'skills/edit'
     end
   end
 

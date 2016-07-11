@@ -14,16 +14,20 @@
   <div class="custom-hr"></div>
 
   <div class="row">
+    <div class="col-md-4 margin">
+      <h4>Work Experience</h4>
+    </div>
     <div class="col-md-4 margin pull-right">
-      <% @resume.skills.order(:section).each do |skill| %>
+      <h4>Skills & Competences</h4>
+      <% @resume.skills.order(:section, percent: :desc).each do |skill| %>
 
           <h5><%= skill.section %></h5>
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
-            <div class="skillbar-title" style="background: #d35400;"><span><%= skill.title %></span></div>
-            <div class="skillbar-bar" style="background: #e67e22;"></div>
+            <div class="skillbar-title" style="background: #2980b9;"><span><%= skill.title %></span></div>
+            <div class="skillbar-bar" style="background: #3498db;"></div>
             <div class="skill-bar-percent"><%= skill.percent %>%</div>
           </div> <!-- End Skill Bar -->
-          
+
       <% end %>
     </div>
   </div>
