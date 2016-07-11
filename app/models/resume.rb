@@ -1,4 +1,5 @@
 class Resume < ActiveRecord::Base
+  has_many :skills
   has_attached_file :avatar,
                     :styles => {
                         :small => "180x180#"

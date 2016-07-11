@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160710200604) do
+ActiveRecord::Schema.define(version: 20160711105415) do
 
   create_table "resumes", force: :cascade do |t|
     t.string   "name"
@@ -23,5 +23,16 @@ ActiveRecord::Schema.define(version: 20160710200604) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
   end
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "section"
+    t.string   "title"
+    t.string   "percent"
+    t.integer  "resume_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "skills", ["resume_id"], name: "index_skills_on_resume_id"
 
 end

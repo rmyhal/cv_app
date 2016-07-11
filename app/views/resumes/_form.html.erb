@@ -29,12 +29,14 @@
               <%= f.label 'Image' %>
               <%= f.file_field :avatar, class: 'form-control-file' %>
             </fieldset>
-
-            <%= link_to 'Back', resumes_path, class: 'btn btn-default' %>
-            <%= f.submit 'Create', class: 'btn btn-primary' %>
           </form>
 
-      <% end %>
+
     </div>
   </div>
+  <div class="custom-hr"></div>
+          <%= f.submit 'Done', class: 'btn btn-primary pull-right margin' %>
+          <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>
+
+      <% end %>
 </div>
