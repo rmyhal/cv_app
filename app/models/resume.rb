@@ -1,7 +1,7 @@
 class Resume < ActiveRecord::Base
   has_attached_file :avatar,
                     :styles => {
-                        :small => "180x180>"
+                        :small => "180x180#"
                     }
   validates :name, presence: true,
             length: {minimum: 5}
