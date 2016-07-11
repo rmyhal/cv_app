@@ -21,10 +21,10 @@ class ResumesController < ApplicationController
       end
   end
   def update
-    @article = Article.find(params[:id])
+    @resume = Resume.find(params[:id])
 
-    if @article.update(article_params)
-      redirect_to @article
+    if @resume.update(resume_params)
+      redirect_to @resume
     else
       render 'edit'
     end

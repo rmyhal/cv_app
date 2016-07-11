@@ -1,43 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <%= form_for :resume, url: resumes_path  do |f| %>
-          <% if @resume.errors.any? %>
-              <div id="error_explanation">
-                <h2>
-                  <%= pluralize(@resume.errors.count, "error") %> prohibited
-                  this article from being saved:
-                </h2>
-                <ul>
-                  <% @resume.errors.full_messages.each do |msg| %>
-                      <li><%= msg %></li>
-                  <% end %>
-                </ul>
-              </div>
-          <% end %>
-
-          <form>
-            <fieldset class="form-group">
-              <%= f.label 'Name' %>
-              <%= f.text_field :name, class: 'form-control' %>
-            </fieldset>
-            <fieldset class="form-group">
-              <%= f.label 'General information' %>
-              <%= f.text_area :general_info, class: 'form-control' %>
-            </fieldset>
-            <fieldset class="form-group">
-              <%= f.label 'Image' %>
-              <%= f.file_field :avatar, class: 'form-control-file' %>
-            </fieldset>
-
-            <%= link_to 'Back', resumes_path, class: 'btn btn-default' %>
-            <%= f.submit 'Create', class: 'btn btn-primary' %>
-          </form>
-
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render 'form' %>
 
 
 
