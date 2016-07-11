@@ -1,0 +1,25 @@
+<%= link_to 'Delete', resume_path, method: :delete, data: {confirm: "Are you sure?"} %> <br>
+<%= link_to 'Back', resumes_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-2">
+      <h1 class="worker-name"> <%= @resume.name %></h1>
+      <span class="worker-info"><%= @resume.general_info %></span>
+    </div>
+    <div class="col-md-2 ">
+      <%= image_tag @resume.avatar.url(:small), class: 'circular' %>
+    </div>
+    <div class="col-md-2">
+      <img src="/assets/everlabs_logo.png" style="width: 150px">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
