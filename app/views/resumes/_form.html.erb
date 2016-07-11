@@ -29,14 +29,25 @@
               <%= f.label 'Image' %>
               <%= f.file_field :avatar, class: 'form-control-file' %>
             </fieldset>
+            <%= f.submit class: 'btn btn-primary pull-right margin' %>
+            <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>
           </form>
-
-
     </div>
+          <div class="col-md-4">
+            <h4>Skills & Competences <%= link_to 'Add skill', new_resume_skill_path(@resume), class: 'btn btn-primary' %></h4>
+            <% @resume.skills.each do |skill| %>
+                  <p><strong>Section: </strong>
+                  <%= skill.section %></p>
+                <p><strong>Title: </strong>
+                  <%= skill.title %></p>
+                <p><strong>Percent: </strong>
+                  <%= skill.percent %>%</p>
+                <%= link_to 'Edit', edit_resume_skill_path(@resume, skill), class: 'btn btn-warning btn-xs' %>
+                <%= link_to 'Delete', resume_skill_path(@resume, skill), class: 'btn btn-danger btn-xs' , method: :delete, data: {confirm: "Are you sure?"}%>
+                <% end %>
+          </div>
   </div>
   <div class="custom-hr"></div>
-          <%= f.submit 'Done', class: 'btn btn-primary pull-right margin' %>
-          <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>
 
       <% end %>
 </div>

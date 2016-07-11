@@ -13,6 +13,19 @@
   </div>
   <div class="custom-hr"></div>
 
+  <div class="row">
+    <div class="col-md-5 margin pull-right">
+      <% @resume.skills.each do |skill| %>
+          <h4><%= skill.section %></h4>
+          <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
+            <div class="skillbar-title" style="background: #d35400;"><span><%= skill.title %></span></div>
+            <div class="skillbar-bar" style="background: #e67e22;"></div>
+            <div class="skill-bar-percent"><%= skill.percent %>%</div>
+          </div> <!-- End Skill Bar -->
+      <% end %>
+    </div>
+  </div>
+
   <%= link_to 'Delete', resume_path,class: 'btn btn-danger pull-right margin', method: :delete, data: {confirm: "Are you sure?"} %>
   <%= link_to 'Edit', edit_resume_path, class: 'btn btn-warning pull-right margin' %>
   <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>

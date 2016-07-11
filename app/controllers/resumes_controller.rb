@@ -14,8 +14,9 @@ class ResumesController < ApplicationController
   def create
     @resume = Resume.new(resume_params)
 
+    flash[:notice] = "Resume created"
     if @resume.save
-      redirect_to resumes_path
+      redirect_to resume_path(@resume)
     else
       render 'new'
       end
@@ -24,7 +25,8 @@ class ResumesController < ApplicationController
     @resume = Resume.find(params[:id])
 
     if @resume.update(resume_params)
-      redirect_to @resume
+      flash[:notice] = "Resume updated"
+      redirect_to resume_path(@resume)
     else
       render 'edit'
     end
