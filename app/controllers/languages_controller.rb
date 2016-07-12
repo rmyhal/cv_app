@@ -9,21 +9,21 @@ class LanguagesController < ApplicationController
     @language.resume_id = @resume.id
 
     if @language.save
-      flash[:notice] = "Skill created"
+      flash[:notice] = "Language created"
       redirect_to edit_resume_path(@resume)
     end
   end
 
   def update
-    if @language.update(skill_params)
-      flash[:notice] = "Skill updated"
+    if @language.update(language_params)
+      flash[:notice] = "Language updated"
       redirect_to edit_resume_path(@resume)
     end
   end
 
   def destroy
     @language.destroy
-    flash[:notice] = "Skill was deleted"
+    flash[:notice] = "Language was deleted"
     redirect_to edit_resume_path(@resume)
   end
 

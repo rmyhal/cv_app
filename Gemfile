@@ -28,6 +28,8 @@ gem 'autoprefixer-rails'
 gem 'paperclip', '~> 4.2'
 gem 'cocoon'
 
+gem 'bootstrap-datepicker-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

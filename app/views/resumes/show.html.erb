@@ -16,7 +16,9 @@
   <div class="row">
     <div class="col-md-4 margin">
       <h4>Project Experience</h4>
-
+        <% @resume.projects.each do |project| %>
+          <span><%= project.role %> </span>
+          <% end %>
     </div>
     <div class="col-md-4 margin pull-right">
       <h4>Skills & Competences</h4>
@@ -34,9 +36,6 @@
 
   </div>
   <div class="row">
-
-
-
     <div class="col-md-4 margin pull-right">
       <h4>Languages</h4>
       <% @resume.languages.each do |language| %>

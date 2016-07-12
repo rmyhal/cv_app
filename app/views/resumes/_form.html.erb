@@ -56,11 +56,27 @@
               <div class="col-md-5">
                 <%= link_to_add_association 'Add language', f, :languages, partial: 'languages_fields', class: 'btn btn-primary' %>
               </div>
-
           </div>
 
         </div>
 
+      </div>
+
+      <div class="custom-hr"></div>
+
+      <div class="row margin">
+        <div class="col-md-12">
+          <div class="text-center">Project Experience</div>
+          <div id="projects">
+            <%= f.fields_for :projects do |project| %>
+              <%= render 'projects_fields', f: project %>
+            <% end %>
+
+            <div class="col-md-3">
+              <%= link_to_add_association 'Add project', f, :projects, partial: 'projects_fields', class: 'btn btn-primary margin' %>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="custom-hr"></div>
