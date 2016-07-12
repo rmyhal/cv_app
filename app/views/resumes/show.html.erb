@@ -22,9 +22,11 @@
     </div>
     <div class="col-md-4 margin pull-right">
       <h4>Skills & Competences</h4>
-      <% @resume.skills.order(:section, percent: :desc).each do |skill| %>
+
+      <% @resume.skills.each do |skill| %>
 
           <h5><%= skill.section %></h5>
+
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
             <div class="skillbar-title" style="background: #2980b9;"><span><%= skill.title %></span></div>
             <div class="skillbar-bar" style="background: #3498db;"></div>

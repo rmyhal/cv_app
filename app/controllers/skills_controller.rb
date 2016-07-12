@@ -4,6 +4,7 @@ before_action :set_resume
   def new
     @skill = Skill.new
   end
+
   def create
     @skill = Skill.new(skill_params)
     @skill.resume_id = @resume.id
