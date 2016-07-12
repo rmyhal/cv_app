@@ -15,7 +15,7 @@
     </div>
   </div>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="text-center">Basic information</div>
           <div class="form-group">
             <%= f.label 'Name' %>
@@ -44,6 +44,21 @@
             </div>
 
           </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="text-center">Languages</div>
+            <div id="languages">
+              <%= f.fields_for :languages do |language| %>
+                  <%= render 'languages_fields', f: language %>
+              <% end %>
+
+              <div class="col-md-5">
+                <%= link_to_add_association 'Add language', f, :languages, partial: 'languages_fields', class: 'btn btn-primary' %>
+              </div>
+
+          </div>
+
         </div>
 
       </div>

@@ -1,6 +1,10 @@
 class Resume < ActiveRecord::Base
   has_many :skills
+  has_many :languages
+  has_many :projects
   accepts_nested_attributes_for :skills, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :languages, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :projects, reject_if: :all_blank, allow_destroy: true
   has_attached_file :avatar,
                     :styles => {
                         :small => "150x150#"
