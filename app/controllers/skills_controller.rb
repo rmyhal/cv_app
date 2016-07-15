@@ -1,6 +1,7 @@
 class SkillsController < ApplicationController
 before_action :set_skill, only: [:update, :destroy]
 before_action :set_resume
+
   def new
     @skill = Skill.new
   end

@@ -1,9 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:update, :destroy]
   before_action :set_resume
+
   def new
     @project = Project.new
   end
+
   def create
     @project = Project.new(project_params)
     @project.resume_id = @resume.id

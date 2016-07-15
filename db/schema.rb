@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712121011) do
+ActiveRecord::Schema.define(version: 20160715064253) do
 
   create_table "languages", force: :cascade do |t|
     t.string   "name"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20160712121011) do
   add_index "languages", ["resume_id"], name: "index_languages_on_resume_id"
 
   create_table "projects", force: :cascade do |t|
-    t.datetime "date_from"
-    t.datetime "date_to"
+    t.string   "date_from"
+    t.string   "date_to"
     t.string   "client"
     t.text     "description"
     t.text     "technologies"

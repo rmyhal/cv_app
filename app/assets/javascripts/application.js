@@ -13,9 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
+//= require bootstrap-datetimepicker
 //= require bootstrap-sprockets
 //= require cocoon
-//= require bootstrap-datepicker
 //= require_tree .
 
 $(document).ready(function(){

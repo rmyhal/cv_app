@@ -7,20 +7,40 @@
     <div class="col-md-3">
       <%= image_tag @resume.avatar.url(:small), class: 'circular' %>
     </div>
-    <div class="col-md-3 ">
-      <img src="/assets/everlabs_logo.png" style="width: 300px">
+    <div class="col-md-3">
+      <img src="/assets/everlabs_logo.png" style="width: 250px">
     </div>
   </div>
   <div class="custom-hr"></div>
 
   <div class="row">
-    <div class="col-md-4 margin">
+    <div class="col-md-5 col-md-offset-1">
       <h4>Project Experience</h4>
+
         <% @resume.projects.each do |project| %>
-          <span><%= project.role %> </span>
+          <div class="project-sections"></div>
+          <div class="project-date project-fields">
+            <%= DateTime.strptime(project.date_from, '%m/%Y').strftime('%B %Y') %> -
+          <% if project.date_to.empty? %>
+            for now
+                <% else %>
+            <%= DateTime.strptime(project.date_to, '%m/%Y').strftime('%B %Y') %>
+                <% end %>
+
+          <span style="display: block; color: #2E2F30"><strong>Client</strong>: <%= project.client %></span>
+          </div>
+          <div class="project-fields">
+            <strong>Project description</strong>: <%= project.description %>
+          </div>
+          <div class="project-fields">
+            <strong>Used technologies</strong>: <%= project.technologies %>
+          </div>
+          <div class="project-fields">
+            <strong>Role in project</strong>: <%= project.role %>
+          </div>
           <% end %>
     </div>
-    <div class="col-md-4 margin pull-right">
+    <div class="col-md-4 col-md-offset-1">
       <h4>Skills & Competences</h4>
 
       <% @resume.skills.each do |skill| %>
@@ -28,7 +48,8 @@
           <h5><%= skill.section %></h5>
 
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
-            <div class="skillbar-title" style="background: #2980b9;"><span><%= skill.title %></span></div>
+            <div class="skillbar-title" style="background: #2980b9;">
+              <div class="skill-title"><%= skill.title %></div></div>
             <div class="skillbar-bar" style="background: #3498db;"></div>
             <div class="skill-bar-percent"><%= skill.percent %>%</div>
           </div> <!-- End Skill Bar -->
@@ -38,12 +59,27 @@
 
   </div>
   <div class="row">
-    <div class="col-md-4 margin pull-right">
+
+    <div class="col-md-5 col-md-offset-1">
+      <h4>Job Experience</h4>
+    </div>
+
+    <div class="col-md-4 col-md-offset-1">
       <h4>Languages</h4>
       <% @resume.languages.each do |language| %>
           <p><span><%= language.name%>: </span>
             <span><%= language.level %></span></p>
       <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <h4>Education</h4>
+    </div>
+
+    <div class="col-md-4 col-md-offset-1">
+      <h4>Interests</h4>
     </div>
   </div>
 

@@ -69,7 +69,7 @@
           <div class="text-center">Project Experience</div>
           <div id="projects">
             <%= f.fields_for :projects do |project| %>
-              <%= render 'projects_fields', f: project %>
+                <%= render 'projects_fields', f: project %>
             <% end %>
 
             <div class="col-md-3">
@@ -77,10 +77,13 @@
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="custom-hr"></div>
+
       <%= f.submit class: 'btn btn-primary pull-right margin' %>
       <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>
-  <% end %>
+      <% end %>
+
 </div>

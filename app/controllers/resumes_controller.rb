@@ -40,7 +40,9 @@ class ResumesController < ApplicationController
 
   private
   def resume_params
-    params.require(:resume).permit(:name, :general_info, :avatar, skills_attributes: [:id, :section, :title, :percent, :_destroy],
-      languages_attributes: [:id, :name, :level, :_destroy])
+    params.require(:resume).permit(:name, :general_info, :avatar,
+                                   skills_attributes: [:id, :section, :title, :percent, :_destroy],
+                                   languages_attributes: [:id, :name, :level, :_destroy],
+                                   projects_attributes:[:id, :date_from, :date_to, :client, :description, :technologies, :role, :_destroy])
   end
 end
