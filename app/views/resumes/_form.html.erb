@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="custom-hr"></div>
+      <div class="custom-hr-form"></div>
 
       <div class="row margin">
         <div class="col-md-12">
@@ -80,8 +80,24 @@
         </div>
 
       </div>
+      <div class="custom-hr-form"></div>
 
-      <div class="custom-hr"></div>
+      <div class="row margin">
+        <div class="col-md-12">
+          <div class="text-center">Job Experience</div>
+          <div id="jobs">
+            <%= f.fields_for :jobs do |job| %>
+                <%= render 'jobs_fields', f: job %>
+            <% end %>
+
+            <div class="col-md-3">
+              <%= link_to_add_association 'Add project', f, :jobs, partial: 'jobs_fields', class: 'btn btn-primary margin' %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-hr-form"></div>
 
       <div class="row margin">
         <div class="col-md-3">
@@ -112,6 +128,8 @@
         </div>
 
       </div>
+
+      <div class="custom-hr-form"></div>
 
       <%= f.submit class: 'btn btn-primary pull-right margin' %>
       <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>

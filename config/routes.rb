@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :projects
     resources :interests
     resources :educations
+    resources :jobs
   end
 
   root 'resumes#index'

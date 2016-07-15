@@ -45,6 +45,7 @@ class ResumesController < ApplicationController
                                    languages_attributes: [:id, :name, :level, :_destroy],
                                    projects_attributes:[:id, :date_from, :date_to, :client, :description, :technologies, :role, :_destroy],
                                    interests_attributes:[:id, :name, :_destroy],
-                                   educations_attributes:[:id, :date_from, :date_to, :level, :description, :place, :_destroy])
+                                   educations_attributes:[:id, :date_from, :date_to, :level, :description, :place, :_destroy],
+                                   jobs_attributes:[:id, :date_from, :date_to, :firm, :position, :place, :_destroy])
   end
 end

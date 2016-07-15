@@ -43,9 +43,13 @@
     <div class="col-md-4 col-md-offset-1">
       <h4>Skills & Competences</h4>
 
-      <% @resume.skills.each do |skill| %>
+
+
+      <% @resume.skills.reorder('percent DESC').order('section').each do |skill| %>
 
           <h5><%= skill.section %></h5>
+
+        
 
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
             <div class="skillbar-title" style="background: #2980b9;">
@@ -62,6 +66,23 @@
 
     <div class="col-md-5 col-md-offset-1">
       <h4>Job Experience</h4>
+      <% @resume.jobs.each do |job| %>
+          <div class="project-sections"></div>
+          <div class="project-date project-fields">
+            <%= DateTime.strptime(job.date_from, '%m/%Y').strftime('%B %Y') %> -
+            <% if job.date_to.empty? %>
+                for now
+            <% else %>
+                <%= DateTime.strptime(job.date_to, '%m/%Y').strftime('%B %Y') %>
+            <% end %>
+            <span class="pull-right"> <%= job.place %></span>
+
+            <span style="display: block; color: #2E2F30"><strong>Firm</strong>: <%= job.firm %></span>
+          </div>
+          <div class="project-fields">
+            <strong>Position</strong>: <%= job.position %>
+          </div>
+      <% end %>
     </div>
 
     <div class="col-md-4 col-md-offset-1">
