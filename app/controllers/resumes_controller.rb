@@ -1,4 +1,6 @@
 class ResumesController < ApplicationController
+
+  http_basic_authenticate_with name: 'everUser', password: 'everPassword', except: :show
   def index
     @resumes = Resume.all
   end
