@@ -76,6 +76,31 @@
   <div class="row">
     <div class="col-md-5 col-md-offset-1">
       <h4>Education</h4>
+      <% @resume.educations.each do |education| %>
+          <div class="project-sections-education"></div>
+          <div class="project-date project-fields">
+            <%= DateTime.strptime(education.date_from, '%m/%Y').strftime('%B %Y') %> -
+            <% if education.date_to.empty? %>
+                for now
+            <% else %>
+                <%= DateTime.strptime(education.date_to, '%m/%Y').strftime('%B %Y') %>
+            <% end %>
+            <span class="pull-right"><%= education.place %></span>
+          </div>
+          <% if education.level.empty? %>
+              <div class="project-fields">
+                <strong>Description</strong>: <%= education.description %>
+              </div>
+              <% else %>
+              <div class="project-fields">
+                <strong>Level</strong>: <%= education.level %>
+              </div>
+              <div class="project-fields">
+                <strong>Description</strong>: <%= education.description %>
+              </div>
+          <% end %>
+      <% end %>
+
     </div>
 
     <div class="col-md-4 col-md-offset-1">

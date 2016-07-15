@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :languages
     resources :projects
     resources :interests
+    resources :educations
   end
 
   root 'resumes#index'

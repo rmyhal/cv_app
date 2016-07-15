@@ -97,6 +97,20 @@
 
           </div>
         </div>
+
+        <div class="col-md-9">
+          <div class="text-center">Education</div>
+          <div id="education">
+            <%= f.fields_for :educations do |education| %>
+              <%= render 'educations_fields', f:education %>
+            <% end %>
+
+            <div class="col-md-1">
+              <%= link_to_add_association 'Add education', f, :educations, partial: 'educations_fields', class: 'btn btn-primary margin' %>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <%= f.submit class: 'btn btn-primary pull-right margin' %>
