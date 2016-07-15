@@ -80,6 +80,9 @@
 
     <div class="col-md-4 col-md-offset-1">
       <h4>Interests</h4>
+      <% @resume.interests.each do |interest| %>
+      <span><%= interest.name %></span>
+          <% end %>
     </div>
   </div>
 

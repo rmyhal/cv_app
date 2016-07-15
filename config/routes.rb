@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :skills
     resources :languages
     resources :projects
+    resources :interests
   end
 
   root 'resumes#index'

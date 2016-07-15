@@ -1,9 +1,11 @@
 class LanguagesController < ApplicationController
   before_action :set_language, only: [:update, :destroy]
   before_action :set_resume
+
   def new
     @language = Language.new
   end
+
   def create
     @language = Language.new(language_params)
     @language.resume_id = @resume.id

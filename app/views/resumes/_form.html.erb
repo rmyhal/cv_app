@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container form">
   <%= form_for @resume do |f| %>
   <div class="row">
     <div class="col-md-4">
@@ -15,38 +15,41 @@
     </div>
   </div>
       <div class="row">
-        <div class="col-md-2">
-          <div class="text-center">Basic information</div>
-          <div class="form-group">
-            <%= f.label 'Name' %>
-            <%= f.text_field :name, class: 'form-control' %>
-          </div>
+        <div class="col-md-3">
 
-          <div class="form-group">
-            <%= f.label 'General information' %>
-            <%= f.text_area :general_info, class: 'form-control' %>
-          </div>
+            <div class="text-center">Basic information</div>
+            <div class="form-group">
+              <%= f.label 'Name' %>
+              <%= f.text_field :name, class: 'form-control' %>
+            </div>
 
-          <div class="form-group">
-            <%= f.label 'Image' %>
-            <%= f.file_field :avatar, class: 'form-control-file' %>
-          </div>
+            <div class="form-group">
+              <%= f.label 'General information' %>
+              <%= f.text_area :general_info, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label 'Image' %>
+              <%= f.file_field :avatar, class: 'form-control-file' %>
+            </div>
+
+
         </div>
 
         <div class="col-md-5">
-          <div class="text-center">Skills</div>
-          <div id="skills">
-            <%= f.fields_for :skills do |skill| %>
-                <%= render 'skill_fields', f: skill %>
-            <% end %>
-            <div class="col-md-3">
-              <%= link_to_add_association 'Add skill', f, :skills, partial: 'skill_fields', class: 'btn btn-primary' %>
+            <div class="text-center">Skills</div>
+            <div id="skills">
+              <%= f.fields_for :skills do |skill| %>
+                  <%= render 'skill_fields', f: skill %>
+              <% end %>
+              <div class="col-md-3">
+                <%= link_to_add_association 'Add skill', f, :skills, partial: 'skill_fields', class: 'btn btn-primary' %>
+              </div>
             </div>
-
-          </div>
         </div>
 
         <div class="col-md-4">
+
             <div class="text-center">Languages</div>
             <div id="languages">
               <%= f.fields_for :languages do |language| %>
@@ -57,9 +60,7 @@
                 <%= link_to_add_association 'Add language', f, :languages, partial: 'languages_fields', class: 'btn btn-primary' %>
               </div>
           </div>
-
         </div>
-
       </div>
 
       <div class="custom-hr"></div>
@@ -81,6 +82,22 @@
       </div>
 
       <div class="custom-hr"></div>
+
+      <div class="row margin">
+        <div class="col-md-3">
+          <div class="text-center">Interests</div>
+          <div id="interests">
+            <%= f.fields_for :interests do |interest| %>
+              <%= render 'interests_fields', f:interest %>
+            <% end %>
+            <br>
+            <div class="col-md-1">
+              <%= link_to_add_association 'Add interests', f, :interests, partial: 'interests_fields', class: 'btn btn-primary margin' %>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       <%= f.submit class: 'btn btn-primary pull-right margin' %>
       <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>
