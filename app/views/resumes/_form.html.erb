@@ -1,4 +1,4 @@
-<div class="container form">
+<div class="container ">
   <%= form_for @resume do |f| %>
   <div class="row">
     <div class="col-md-4">
@@ -15,7 +15,7 @@
     </div>
   </div>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 card">
 
             <div class="text-center">Basic information</div>
             <div class="form-group">
@@ -36,100 +36,89 @@
 
         </div>
 
-        <div class="col-md-5">
-            <div class="text-center">Skills</div>
+        <div class="col-md-5 card" style="margin-left: 10px">
             <div id="skills">
+              <div class="text-center">Skills </div>
               <%= f.fields_for :skills do |skill| %>
                   <%= render 'skill_fields', f: skill %>
               <% end %>
-              <div class="col-md-3">
-                <%= link_to_add_association 'Add skill', f, :skills, partial: 'skill_fields', class: 'btn btn-primary' %>
+              <div class="text-right">
+                <%= link_to_add_association '+', f, :skills, class: 'btn btn-primary btn-xs' %>
               </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-
+        <div class="col-md-3 card" style="margin-left: 10px">
             <div class="text-center">Languages</div>
             <div id="languages">
               <%= f.fields_for :languages do |language| %>
                   <%= render 'languages_fields', f: language %>
               <% end %>
 
-              <div class="col-md-5">
-                <%= link_to_add_association 'Add language', f, :languages, partial: 'languages_fields', class: 'btn btn-primary' %>
+              <div class="text-right">
+                <%= link_to_add_association '+', f, :languages, partial: 'languages_fields', class: 'btn btn-primary btn-xs' %>
               </div>
           </div>
         </div>
       </div>
 
-      <div class="custom-hr-form"></div>
 
-      <div class="row margin">
-        <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 card">
           <div class="text-center">Project Experience</div>
           <div id="projects">
             <%= f.fields_for :projects do |project| %>
                 <%= render 'projects_fields', f: project %>
             <% end %>
-
-            <div class="col-md-3">
-              <%= link_to_add_association 'Add project', f, :projects, partial: 'projects_fields', class: 'btn btn-primary margin' %>
+            <div class="text-right">
+              <%= link_to_add_association '+', f, :projects, partial: 'projects_fields', class: 'btn btn-primary btn-xs' %>
             </div>
+
           </div>
         </div>
 
-      </div>
-      <div class="custom-hr-form"></div>
-
-      <div class="row margin">
-        <div class="col-md-12">
+        <div class="col-md-5 card" style="margin-left: 10px">
           <div class="text-center">Job Experience</div>
           <div id="jobs">
             <%= f.fields_for :jobs do |job| %>
                 <%= render 'jobs_fields', f: job %>
             <% end %>
-
-            <div class="col-md-3">
-              <%= link_to_add_association 'Add project', f, :jobs, partial: 'jobs_fields', class: 'btn btn-primary margin' %>
+            <div class="text-right">
+              <%= link_to_add_association '+', f, :jobs, partial: 'jobs_fields', class: 'btn btn-primary btn-xs' %>
             </div>
           </div>
         </div>
+
       </div>
 
-      <div class="custom-hr-form"></div>
-
-      <div class="row margin">
-        <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-4 card">
           <div class="text-center">Interests</div>
           <div id="interests">
             <%= f.fields_for :interests do |interest| %>
               <%= render 'interests_fields', f:interest %>
             <% end %>
-            <br>
-            <div class="col-md-1">
-              <%= link_to_add_association 'Add interests', f, :interests, partial: 'interests_fields', class: 'btn btn-primary margin' %>
+            <div class="text-right">
+              <%= link_to_add_association '+', f, :interests, partial: 'interests_fields', class: 'btn btn-primary btn-xs' %>
             </div>
 
           </div>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-7 card"style="margin-left: 10px">
           <div class="text-center">Education</div>
           <div id="education">
             <%= f.fields_for :educations do |education| %>
               <%= render 'educations_fields', f:education %>
             <% end %>
 
-            <div class="col-md-1">
-              <%= link_to_add_association 'Add education', f, :educations, partial: 'educations_fields', class: 'btn btn-primary margin' %>
+            <div class="text-right">
+              <%= link_to_add_association '+', f, :educations, partial: 'educations_fields', class: 'btn btn-primary btn-xs' %>
             </div>
           </div>
         </div>
 
       </div>
-
-      <div class="custom-hr-form"></div>
 
       <%= f.submit class: 'btn btn-primary pull-right margin' %>
       <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right margin' %>
