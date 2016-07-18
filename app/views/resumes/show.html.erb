@@ -8,7 +8,7 @@
       <%= image_tag @resume.avatar.url(:small), class: 'circular' %>
     </div>
     <div class="col-md-3">
-      <img src="/everlabs_logo.png" style="width: 250px">
+      <img src="assets/everlabs_logo.png" style="width: 250px">
     </div>
   </div>
   <hr>
@@ -43,14 +43,10 @@
     <div class="col-md-4 col-md-offset-1">
       <h4>Skills & Competences</h4>
 
-
-
       <% @resume.skills.reorder('percent DESC').order('section').each do |skill| %>
 
+
           <h5><%= skill.section %></h5>
-
-        
-
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
             <div class="skillbar-title" style="background: #2980b9;">
               <div class="skill-title"><%= skill.title %></div></div>
