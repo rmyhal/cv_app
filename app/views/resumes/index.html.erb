@@ -1,5 +1,12 @@
+<div id="logo-section" class="logo-section">
+  <img id="header-logo-image" src="/assets/everlabs_logo.png" alt="Ruby on Rails"/>
+</div>
+
 <div class="container">
   <div class="row">
+
+    <%= link_to 'Create resume', new_resume_path, class: 'btn btn-info pull-right', :style => 'margin-right: 40px' %>
+
     <% @resumes.each do |resume| %>
         <div class="col-md-3">
           <%= link_to image_tag(resume.avatar.url(:small), class: 'circular'), resume_url(resume) %>

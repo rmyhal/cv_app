@@ -96,6 +96,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    parallax-rails (1.0.0)
     pg (0.18.4)
     pkg-config (1.1.7)
     rack (1.6.4)
@@ -181,6 +182,7 @@ DEPENDENCIES
   jquery-rails
   momentjs-rails (>= 2.9.0)
   paperclip (~> 4.2)
+  parallax-rails
   pg
   rails (= 4.2.5)
   rails_12factor

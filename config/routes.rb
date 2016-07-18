@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     resources :skills
     resources :languages
     resources :projects
-    resources :interests
     resources :educations
     resources :jobs
   end

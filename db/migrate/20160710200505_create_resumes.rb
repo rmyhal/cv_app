@@ -3,6 +3,7 @@ class CreateResumes < ActiveRecord::Migration
     create_table :resumes do |t|
       t.string :name
       t.text :general_info
+      t.string :interests
 
       t.timestamps null: false
     end

@@ -17,6 +17,7 @@
 //= require bootstrap-datetimepicker
 //= require bootstrap-sprockets
 //= require cocoon
+
 //= require_tree .
 
 $(document).ready(function(){
@@ -26,3 +27,5 @@ $(document).ready(function(){
         },2000);
     });
 });
+
+$('.parallax-window').parallax({imageSrc: '/assets/parallax.jpg'});

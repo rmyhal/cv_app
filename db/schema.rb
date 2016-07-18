@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20160715122422) do
   create_table "resumes", force: :cascade do |t|
     t.string   "name"
     t.text     "general_info"
+    t.string   "interests"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "avatar_file_name"
