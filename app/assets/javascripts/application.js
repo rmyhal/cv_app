@@ -27,5 +27,3 @@ $(document).ready(function(){
         },2000);
     });
 });
-
-$('.parallax-window').parallax({imageSrc: '/assets/parallax.jpg'});
