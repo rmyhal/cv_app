@@ -45,6 +45,8 @@ GEM
       sass (~> 3.2)
     bootstrap3-datetimepicker-rails (4.17.37)
       momentjs-rails (>= 2.8.1)
+    bootstrap_colorpicker_rails (1.0.2)
+      railties (>= 3.0)
     builder (3.2.2)
     byebug (9.0.5)
     climate_control (0.0.3)
@@ -175,6 +177,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.2.0)
   bootstrap3-datetimepicker-rails (~> 4.17.37)
+  bootstrap_colorpicker_rails
   byebug
   cocoon
   coffee-rails (~> 4.1.0)

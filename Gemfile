@@ -26,6 +26,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'paperclip', '~> 4.2'
 gem 'cocoon'
+gem 'bootstrap_colorpicker_rails'
 
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'

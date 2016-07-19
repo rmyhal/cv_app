@@ -4,6 +4,7 @@ class CreateSkills < ActiveRecord::Migration
       t.string :section
       t.string :title
       t.string :percent
+      t.string :color
       t.references :resume, index: true, foreign_key: true
 
       t.timestamps null: false

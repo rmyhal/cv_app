@@ -1,10 +1,13 @@
 <div class="nested-fields form-horizontal">
 
-  <div class="col-md-6">
+  <div class="col-md-3">
     <%= f.text_field :section, class: 'ever-inputs', placeholder: 'Section'%>
   </div>
   <div class="col-md-3 ">
     <%= f.text_field :title, class: 'ever-inputs', placeholder: 'Title' %>
+  </div>
+  <div class="col-md-3 ">
+    <%= f.text_field :color, class: 'ever-inputs', placeholder: 'Color', id: 'color-picker' %>
   </div>
   <div class="col-md-3">
     <%= f.text_field :percent, class: 'ever-inputs', placeholder: 'Percent'  %>
@@ -14,3 +17,9 @@
   <hr class="col-md-10 col-md-offset-1">
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#color-picker').colorpicker();
+  })
+</script>

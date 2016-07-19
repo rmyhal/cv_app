@@ -40,6 +40,6 @@ before_action :set_resume
   end
 
   def skill_params
-    params.require(:skill).permit(:section, :title, :percent)
+    params.require(:skill).permit(:section, :title, :percent, :color)
   end
 end
