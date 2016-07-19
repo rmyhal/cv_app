@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03d62585-a858-4ab8-b7e7-81ef20bb4429" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/resumes/_skill_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/resumes/_skill_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/resumes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/resumes/show.html.erb" />
     </list>
     <ignored path="cv_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_skill_fields.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_skill_fields.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/resumes/_skill_fields.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -83,13 +82,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="50" column="66" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="66" />
+            <state relative-caret-position="180">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,7 +130,6 @@
         <option value="$PROJECT_DIR$/app/controllers/skills_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/resumes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/skill.rb" />
         <option value="$PROJECT_DIR$/app/views/resumes/_projects_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/resumes/_educations_fields.html.erb" />
@@ -139,6 +138,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/views/resumes/_skill_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/resumes/show.html.erb" />
       </list>
     </option>
   </component>
@@ -639,12 +639,12 @@
       <workItem from="1468317776417" duration="15790000" />
       <workItem from="1468564122798" duration="26822000" />
       <workItem from="1468828355639" duration="18089000" />
-      <workItem from="1468912466864" duration="19124000" />
+      <workItem from="1468912466864" duration="19635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90334000" />
+    <option name="totallyTimeSpent" value="90845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="72" width="1627" height="978" extended-state="0" />
@@ -993,16 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="50" column="66" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1032,6 +1022,17 @@
         <state relative-caret-position="396">
           <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
