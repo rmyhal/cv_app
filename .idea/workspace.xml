@@ -6,8 +6,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/resumes/avatars/000/000/001/small/NQMusLHHNDE.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/resumes/avatars/000/000/002/original/NQMusLHHNDE.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/resumes/avatars/000/000/002/small/NQMusLHHNDE.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/resumes/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/resumes/_form.html.erb" />
     </list>
     <ignored path="cv_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -705,12 +703,12 @@
       <workItem from="1468317776417" duration="15790000" />
       <workItem from="1468564122798" duration="26822000" />
       <workItem from="1468828355639" duration="18089000" />
-      <workItem from="1468912466864" duration="16242000" />
+      <workItem from="1468912466864" duration="16308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87452000" />
+    <option name="totallyTimeSpent" value="87518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="72" width="1627" height="978" extended-state="0" />
