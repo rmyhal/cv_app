@@ -152,21 +152,23 @@ body
   padding: 15px
   background: #ffffff
 
-input[type=text]
+input[type=text], #resume_general_info
   border: none
   border-bottom: 1px solid black
   border-radius: 0
   box-shadow: none
   display: block
   width: 100%
+  overflow: auto
 
 input[type=text]:focus
   box-shadow: none
 
+#resume_general_info:focus
+  box-shadow: none
+  border-color: #3498db
 
-.colored-input
-  background: #2980b9
-  color: white
+.user-name
   text-align: center
 
 .links

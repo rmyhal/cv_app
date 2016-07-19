@@ -22,10 +22,9 @@
         <div class="col-md-10 col-md-offset-1 card">
           <div class="text-center"><h4>Basic information</h4></div>
           <hr>
-          <div class="col-md-8 col-md-offset-2">
             <div class="form-group">
               <%= f.label 'Name' %>
-              <%= f.text_field :name, class: 'form-control colored-input' %>
+              <%= f.text_field :name, class: 'form-control user-name' %>
             </div>
 
             <div class="form-group">
@@ -42,8 +41,6 @@
               <%= f.label 'Image' %>
               <%= f.file_field :avatar, class: 'form-control-file' %>
             </div>
-          </div>
-
         </div>
 
       </div>
@@ -57,7 +54,7 @@
                 <%= render 'skill_fields', f: skill %>
             <% end %>
             <div class="text-right">
-              <%= link_to_add_association '+', f, :skills, class: 'btn btn-primary btn-xs' %>
+              <%= link_to_add_association 'Add more', f, :skills, class: 'btn btn-primary btn-xs' %>
             </div>
             <hr class="col-md-12">
           </div>
@@ -74,7 +71,7 @@
                 <%= render 'projects_fields', f: project %>
             <% end %>
             <div class="text-right">
-              <%= link_to_add_association '+', f, :projects, partial: 'projects_fields', class: 'btn btn-primary btn-xs' %>
+              <%= link_to_add_association 'Add more', f, :projects, partial: 'projects_fields', class: 'btn btn-primary btn-xs' %>
             </div>
 
           </div>
@@ -88,7 +85,7 @@
                 <%= render 'jobs_fields', f: job %>
             <% end %>
             <div class="text-right">
-              <%= link_to_add_association '+', f, :jobs, partial: 'jobs_fields', class: 'btn btn-primary btn-xs' %>
+              <%= link_to_add_association 'Add more', f, :jobs, partial: 'jobs_fields', class: 'btn btn-primary btn-xs' %>
             </div>
           </div>
         </div>
@@ -105,7 +102,7 @@
             <% end %>
 
             <div class="text-right">
-              <%= link_to_add_association '+', f, :educations, partial: 'educations_fields', class: 'btn btn-primary btn-xs' %>
+              <%= link_to_add_association 'Add more', f, :educations, partial: 'educations_fields', class: 'btn btn-primary btn-xs' %>
             </div>
           </div>
         </div>
@@ -116,18 +113,15 @@
         <div class="col-md-10 col-md-offset-1 card">
           <div class="text-center"><h4>Languages</h4></div>
           <hr>
-          <div class="col-md-6 col-md-offset-3">
             <div id="languages">
               <%= f.fields_for :languages do |language| %>
                   <%= render 'languages_fields', f: language %>
               <% end %>
 
               <div class="text-right">
-                <%= link_to_add_association '+', f, :languages, partial: 'languages_fields', class: 'btn btn-primary btn-xs' %>
+                <%= link_to_add_association 'Add more', f, :languages, partial: 'languages_fields', class: 'btn btn-primary btn-xs' %>
               </div>
             </div>
-          </div>
-
         </div>
       </div>
 
