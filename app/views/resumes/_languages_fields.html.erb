@@ -1,15 +1,13 @@
 <div class="nested-fields form-horizontal ">
 
-  <div class="form-group col-md-6">
-    <label class=" text-center">Name</label>
-    <%= f.text_field :name, class: 'form-control input-xs '%>
+  <div class="col-md-6">
+    <%= f.text_field :name, class: 'ever-inputs', placeholder: 'Name'%>
   </div>
-  <div class="form-group col-md-6 ">
-    <label class="text-center">Level</label>
-    <%= f.text_field :level, class: 'form-control input-xs margin-inputs' %>
+  <div class="col-md-6 ">
+    <%= f.text_field :level, class: 'ever-inputs', placeholder: 'Level' %>
+    <%= link_to_remove_association 'remove', f, class: 'btn btn-danger btn-xs pull-right title' %>
   </div>
-  <div class="form-group col-md-1">
-    <label class="text-center"></label>
-    <%= link_to_remove_association 'remove', f, class: 'btn btn-danger btn-xs pull-right' %>
-  </div>
+
+  <hr class="col-md-10 col-md-offset-1">
+
 </div>

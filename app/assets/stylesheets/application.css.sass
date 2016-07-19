@@ -120,11 +120,6 @@ body
   color: #ffffff
   color: rgba(0, 0, 0, 0.4)
 
-.margin-inputs
-  margin-left: 5px
-.margin-inputs-more
-  margin-left: 10px
-
 .project-date
   padding-left: 15px
   color: #2980b9
@@ -152,7 +147,7 @@ body
   padding: 15px
   background: #ffffff
 
-input[type=text], #resume_general_info
+input[type=text], #resume_general_info, #education_general_info, #project_description, #project_technologies
   border: none
   border-bottom: 1px solid black
   border-radius: 0
@@ -162,9 +157,10 @@ input[type=text], #resume_general_info
   overflow: auto
 
 input[type=text]:focus
+  border-color: #3498db
   box-shadow: none
 
-#resume_general_info:focus
+#resume_general_info:focus, #education_general_info:focus, #project_description:focus, #project_technologies:focus
   box-shadow: none
   border-color: #3498db
 
@@ -173,3 +169,15 @@ input[type=text]:focus
 
 .links
   margin: 10px 2px
+
+.add-buttons
+  font-size: 0.9em
+  border-bottom: 1px dashed
+  color: #3498db
+
+
+.add-buttons:hover, .add-buttons:focus
+  text-decoration: none
+
+.ever-inputs
+  padding-top: 15px
