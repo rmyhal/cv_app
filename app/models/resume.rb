@@ -1,9 +1,9 @@
 class Resume < ActiveRecord::Base
-  has_many :skills
-  has_many :languages
-  has_many :projects
-  has_many :educations
-  has_many :jobs
+  has_many :skills, dependent: :destroy
+  has_many :languages, dependent: :destroy
+  has_many :projects, dependent: :destroy
+  has_many :educations, dependent: :destroy
+  has_many :jobs, dependent: :destroy
   accepts_nested_attributes_for :skills, reject_if: :all_blank, allow_destroy: true
   accepts_nested_attributes_for :languages, reject_if: :all_blank, allow_destroy: true
   accepts_nested_attributes_for :projects, reject_if: :all_blank, allow_destroy: true
