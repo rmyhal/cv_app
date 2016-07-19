@@ -7,7 +7,7 @@
     <%= f.text_field :title, class: 'ever-inputs', placeholder: 'Title' %>
   </div>
   <div class="col-md-3 ">
-    <%= f.text_field :color, class: 'ever-inputs', placeholder: 'Color', id: 'color-picker' %>
+    <%= f.text_field :color, class: 'ever-inputs color-picker', placeholder: 'Color' %>
   </div>
   <div class="col-md-3">
     <%= f.text_field :percent, class: 'ever-inputs', placeholder: 'Percent'  %>
@@ -20,6 +20,6 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#color-picker').colorpicker();
+    $('.color-picker').colorpicker();
   })
 </script>
