@@ -44,6 +44,9 @@
       <h4>Skills & Competences</h4>
 
       <% @resume.skills.reorder('percent DESC').order('section').each do |skill| %>
+
+          <span><%= skill.change_color(skill.color) %></span>
+
           <h5><%= skill.section %></h5>
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
             <div class="skillbar-title" style="background: <%= skill.color %> ;">
