@@ -22,3 +22,6 @@ test:
 
 production:
   adapter: postgresql
+  username: admin6uu1tsy
+  password: ITPScttSjbqA
+  database: cv
