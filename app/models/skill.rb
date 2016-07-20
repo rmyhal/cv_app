@@ -1,5 +1,9 @@
 class Skill < ActiveRecord::Base
   belongs_to :resume
+
+  validates :percent, :numericality => { :only_integer => true }
+  validates :percent, :numericality => { :less_than_or_equal_to => 100}
+
   def change_color(color)
     red = color[1,2].to_i(16) + 20
     green1 = color[3]
