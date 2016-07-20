@@ -1,12 +1,14 @@
 class Skill < ActiveRecord::Base
   belongs_to :resume
   def change_color(color)
-    red = color[1,2].to_i + 15
+    red = color[1,2].to_i(16) + 20
     green1 = color[3]
     green2 = color[4]
-    green = "#{green1}#{green2}".to_i + 15
-    blue = color[5,6].to_i + 15
-    rgb = "##{red}#{green}#{blue}"
+    green = (green1 + green2).to_i(16) + 20
+    blue1 = color[5]
+    blue2 = color[6]
+    blue = (blue1 + blue2).to_i(16) + 20
+    rgb = "rgb(#{red},#{green},#{blue})"
     return rgb
   end
 end

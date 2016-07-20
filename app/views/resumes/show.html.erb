@@ -15,8 +15,8 @@
 
   <div class="row">
     <div class="col-md-5 col-md-offset-1">
+      <% if @resume.projects.any? %>
       <h4>Project Experience</h4>
-
         <% @resume.projects.each do |project| %>
           <div class="project-sections"></div>
           <div class="project-date project-fields">
@@ -39,13 +39,12 @@
             <strong>Role in project</strong>: <%= project.role %>
           </div>
           <% end %>
+      <% end %>
     </div>
     <div class="col-md-4 col-md-offset-1">
+      <% if @resume.skills.any? %>
       <h4>Skills & Competences</h4>
-
       <% @resume.skills.reorder('percent DESC').order('section').each do |skill| %>
-
-          <span><%= skill.change_color(skill.color) %></span>
 
           <h5><%= skill.section %></h5>
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
@@ -56,12 +55,14 @@
           </div> <!-- End Skill Bar -->
 
       <% end %>
+      <% end %>
     </div>
 
   </div>
   <div class="row">
 
     <div class="col-md-5 col-md-offset-1">
+      <% if @resume.educations.any? %>
       <h4>Education</h4>
       <% @resume.educations.each do |education| %>
           <div class="project-sections-education"></div>
@@ -85,22 +86,26 @@
               <div class="project-fields">
                 <strong>Description</strong>: <%= education.description %>
               </div>
+              <% end %>
           <% end %>
       <% end %>
 
     </div>
 
     <div class="col-md-4 col-md-offset-1">
+      <% if @resume.languages.any? %>
       <h4>Languages</h4>
       <% @resume.languages.each do |language| %>
           <p><span><%= language.name%>: </span>
             <span><%= language.level %></span></p>
+          <% end %>
       <% end %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-5 col-md-offset-1">
+      <% if @resume.jobs.any? %>
       <h4>Job Experience</h4>
       <% @resume.jobs.each do |job| %>
           <div class="project-sections"></div>
@@ -118,6 +123,7 @@
           <div class="project-fields">
             <strong>Position</strong>: <%= job.position %>
           </div>
+      <% end %>
       <% end %>
     </div>
 

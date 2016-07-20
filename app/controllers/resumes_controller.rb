@@ -7,6 +7,7 @@ class ResumesController < ApplicationController
   end
   def show
     @resume = Resume.find(params[:id])
+
   end
   def new
     @resume = Resume.new
