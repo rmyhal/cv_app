@@ -3,9 +3,11 @@
 </div>
 
 <div class="container">
-  <div class="row">
 
+  <div class="row">
     <%= link_to 'Create resume', new_resume_path, class: 'btn btn-info pull-right', :style => 'margin-right: 40px' %>
+  </div>
+  <div class="row">
 
     <% @resumes.each do |resume| %>
         <div class="col-md-3">
