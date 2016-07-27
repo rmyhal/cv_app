@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03d62585-a858-4ab8-b7e7-81ef20bb4429" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/resumes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/resumes/show.html.erb" />
     </list>
     <ignored path="cv_app.iws" />
@@ -76,8 +74,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+            <state relative-caret-position="360">
+              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -493,12 +491,12 @@
       <workItem from="1469089989927" duration="33000" />
       <workItem from="1469101388761" duration="6000" />
       <workItem from="1469175440687" duration="1161000" />
-      <workItem from="1469621428391" duration="893000" />
+      <workItem from="1469621428391" duration="1144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104930000" />
+    <option name="totallyTimeSpent" value="105181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="100" width="1627" height="978" extended-state="0" />
@@ -855,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        <state relative-caret-position="360">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding />
         </state>
       </provider>

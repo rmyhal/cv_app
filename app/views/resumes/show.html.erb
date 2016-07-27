@@ -46,7 +46,7 @@
       <h4>Skills & Competences</h4>
       <%= section = '' %>
       <% @resume.skills.order('section').order('percent DESC').each do |skill| %>
-        <% if section.empty? || section != skill.section %>
+        <% if section != skill.section %>
           <h5><%= section = skill.section %></h5>
         <% end %>
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
