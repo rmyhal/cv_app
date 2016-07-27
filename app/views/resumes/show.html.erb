@@ -44,9 +44,11 @@
     <div class="col-md-4 col-md-offset-1">
       <% if @resume.skills.any? %>
       <h4>Skills & Competences</h4>
-      <% @resume.skills.reorder('percent DESC').order('section').each do |skill| %>
-
-          <h5><%= skill.section %></h5>
+      <%= section = '' %>
+      <% @resume.skills.order('section').order('percent DESC').each do |skill| %>
+        <% if section.empty? || section != skill.section %>
+          <h5><%= section = skill.section %></h5>
+        <% end %>
           <div class="skillbar clearfix " data-percent="<%= skill.percent %>%">
             <div class="skillbar-title" style="background: <%= skill.color %> ;">
               <div class="skill-title"><%= skill.title %></div></div>
