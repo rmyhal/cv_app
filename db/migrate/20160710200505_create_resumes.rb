@@ -4,6 +4,7 @@ class CreateResumes < ActiveRecord::Migration
       t.string :name
       t.text :general_info
       t.string :interests
+      t.integer :user_id
 
       t.timestamps null: false
     end

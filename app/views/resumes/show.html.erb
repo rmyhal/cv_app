@@ -136,6 +136,10 @@
 
   </div>
 
+  <% if user_signed_in? %>
+    <%= link_to 'Back', resumes_path, class: 'btn btn-default btn-xs pull-right' %>
+      <% end %>
+
 </div>
 
 

@@ -37,6 +37,7 @@
             <div class="form-group fileUpload btn btn-primary">
               <span>Upload image</span>
               <%= f.file_field :avatar, class: 'upload' %>
+              <%= f.hidden_field :user_id , :value => current_user.id %>
             </div>
         </div>
 

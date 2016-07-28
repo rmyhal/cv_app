@@ -1,4 +1,5 @@
 class Resume < ActiveRecord::Base
+  belongs_to :user
   has_many :skills, dependent: :destroy
   has_many :languages, dependent: :destroy
   has_many :projects, dependent: :destroy
@@ -20,6 +21,7 @@ class Resume < ActiveRecord::Base
   validates :avatar, presence: true
   validates :interests,
             length: {minimum: 5}
+  validates :user_id, presence: true
   validates_attachment_content_type :avatar, content_type: /\Aimage/
   validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
 

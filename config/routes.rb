@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :resumes do
     resources :skills
     resources :languages
     resources :projects
     resources :educations
     resources :jobs
+
   end
+
+
 
   root 'resumes#index'
   # The priority is based upon order of creation: first created -> highest priority.

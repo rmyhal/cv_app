@@ -1,9 +1,7 @@
 class ResumesController < ApplicationController
 
-  http_basic_authenticate_with name: 'everUser', password: 's31415926', except: :show
-
   def index
-    @resumes = Resume.all
+    @resumes = Resume.where(:user_id => current_user.id )
   end
 
   def show
@@ -46,7 +44,7 @@ class ResumesController < ApplicationController
 
   private
   def resume_params
-    params.require(:resume).permit(:name, :general_info, :interests, :avatar,
+    params.require(:resume).permit(:name, :general_info, :interests, :avatar, :user_id,
                                    skills_attributes: [:id, :section, :title, :percent, :color, :_destroy],
                                    languages_attributes: [:id, :name, :level, :_destroy],
                                    projects_attributes:[:id, :date_from, :date_to, :client, :description, :technologies, :role, :_destroy],
