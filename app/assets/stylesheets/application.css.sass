@@ -20,7 +20,6 @@
 
 body
   background: #f8f8f8
-  padding-bottom: 30px
 
 .logo-section
   margin: 0 auto
@@ -149,7 +148,7 @@ body
   padding: 15px
   background: #ffffff
 
-input[type=text], textarea
+input[type=text],input[type=email],input[type=password], textarea
   border: none
   border-bottom: 1px solid black
   border-radius: 0
@@ -162,7 +161,7 @@ textarea
   overflow: auto
   resize: none
 
-input[type=text]:focus, textarea:focus
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus, textarea:focus
   outline: none
   border-bottom-color: #3498db
   box-shadow: none
@@ -196,4 +195,11 @@ input[type=text]:focus, textarea:focus
   cursor: pointer
   opacity: 0
   filter: alpha(opacity=0)
+
+.vertical-center
+  min-height: 100%  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh /* These two lines are counted as one :-)       */
+
+  display: flex
+  align-items: center
 
