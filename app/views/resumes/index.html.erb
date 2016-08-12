@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <% if @resumes.present? %>
     <% @resumes.each do |resume| %>
     <div class="col-sm-4 col-md-3">
       <div class="thumbnail">
@@ -15,6 +16,7 @@
         </div>
       </div>
     </div>
+    <% end %>
     <% end %>
   </div>
 
