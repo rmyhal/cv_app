@@ -5,6 +5,17 @@
 <div class="container">
 
   <div class="row">
+    <p class="navbar-text pull-right">
+      <% if user_signed_in? %>
+          Hello, <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+
+      <% end %>
+  </div>
+
+
+  <div class="row">
     <%= link_to 'Create resume', new_resume_path, class: 'btn btn-info pull-right', :style => 'margin-right: 40px' %>
   </div>
   <div class="row", style="margin-top: 20px">
