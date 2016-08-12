@@ -1,9 +1,9 @@
-<div id="logo-section" class="logo-section">
-  <img class="logo-section" src="/assets/images/everlabs_logo.png" alt="Ruby on Rails"/>
-</div>
-
 <div class="container">
   <%= form_for @resume do |f| %>
+      <p class="pull-right links">
+        <%= f.submit class: 'btn btn-primary btn-sm' %>
+        <%= link_to 'Back', resumes_path, class: 'btn btn-default btn-sm' %>
+      </p>
   <div class="row">
     <div class="col-md-4">
       <% if @resume.errors.any? %>
@@ -121,12 +121,6 @@
             </div>
         </div>
       </div>
-
-      <div class="links">
-        <%= f.submit class: 'btn btn-primary pull-right links' %>
-        <%= link_to 'Delete', @resume, :method => :delete, class: 'btn btn-danger pull-right links'%>
-        <%= link_to 'Back', resumes_path, class: 'btn btn-default pull-right links' %>
-        <% end %>
-      </div>
+  <% end %>
 
 </div>

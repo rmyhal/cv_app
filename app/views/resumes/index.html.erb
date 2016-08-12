@@ -1,30 +1,22 @@
-<div id="logo-section" class="logo-section">
-  <img class="logo-section" src="/assets/images/everlabs_logo.png" alt="Ruby on Rails"/>
-</div>
-
 <div class="container">
-
   <div class="row">
-    <p class="navbar-text pull-right">
-      <% if user_signed_in? %>
-          Hello, <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-
-      <% end %>
-  </div>
-
-
-  <div class="row">
-    <%= link_to 'Create resume', new_resume_path, class: 'btn btn-info pull-right', :style => 'margin-right: 40px' %>
-  </div>
-  <div class="row", style="margin-top: 20px">
-
     <% @resumes.each do |resume| %>
-        <div class="col-md-3">
-          <%= link_to image_tag(resume.avatar.url(:small), class: 'circular'), resume_url(resume) %>
-          <h4><%= resume.name %></h4>
+    <div class="col-sm-4 col-md-3">
+      <div class="thumbnail">
+        <%= image_tag(resume.avatar.url(:large)) %>
+        <div class="caption">
+          <h3><%= resume.name %></h3>
+          <p><%= resume.general_info %></p>
+          <p>
+            <%= link_to 'View', resume, class: 'btn btn-default btn-sm' %>
+            <%= link_to 'Edit', edit_resume_path(resume), class: 'btn btn-warning btn-sm' %>
+            <%= link_to 'Delete', resume, method: :delete, class: 'btn btn-danger btn-sm', data: {:confirm => 'Are you sure?'} %>
+          </p>
         </div>
+      </div>
+    </div>
     <% end %>
   </div>
+
 </div>
+

@@ -12,7 +12,8 @@ class Resume < ActiveRecord::Base
   accepts_nested_attributes_for :jobs, reject_if: :all_blank, allow_destroy: true
   has_attached_file :avatar,
                     :styles => {
-                        :small => "150x150#"
+                        :small => "150x150#",
+                        :large => "242x200#"
                     }
   validates :name, presence: true,
             length: {minimum: 5}

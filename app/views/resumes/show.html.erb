@@ -136,8 +136,11 @@
 
   </div>
 
-  <% if user_signed_in? %>
-    <%= link_to 'Back', resumes_path, class: 'btn btn-default btn-xs pull-right' %>
+  <% if user_signed_in? && current_user.id == @resume.user_id %>
+      <p class="pull-right">
+        <%= link_to 'Back', resumes_path, class: 'btn btn-default btn-sm' %>
+        <%= link_to 'Edit', edit_resume_path, class: 'btn btn-warning btn-sm' %>
+      </p>
       <% end %>
 
 </div>
