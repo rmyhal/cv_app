@@ -26,5 +26,7 @@ $(document).ready(function(){
             width:$(this).attr('data-percent')
         },2000);
     });
-
+    $('.my-form-group input').on('focus blur', function (e) {
+        $(this).parents('.my-form-group').toggleClass('my-active', (e.type === 'focus' || this.value.length > 0));
+    }).trigger('blur');
 });

@@ -16,7 +16,7 @@
         <%= f.password_field :password, autocomplete: 'off', class: 'my-form-control' %>
       </div>
 
-        <%= f.submit 'Login', class: 'btn'%>
+        <%= f.submit 'Login', class: 'login-btn'%>
 
           <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
               <span>Forgot your</span>
@@ -29,11 +29,5 @@
           <% end -%>
   <% end %>
 </div>
-
-<script>
-  $('.my-form-group input').on('focus blur', function (e) {
-    $(this).parents('.my-form-group').toggleClass('my-active', (e.type === 'focus' || this.value.length > 0));
-  }).trigger('blur');
-</script>
 
 
