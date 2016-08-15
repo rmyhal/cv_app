@@ -26,4 +26,5 @@ $(document).ready(function(){
             width:$(this).attr('data-percent')
         },2000);
     });
+
 });
